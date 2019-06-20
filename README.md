@@ -12,16 +12,19 @@ Here We need to create a developer Account for Facebook, Twitter and Instagram. 
 We Start with the firebase, step 1: first off all go this link https://console.firebase.google.com/ if you have not created your account here then create a account 
 step 2: Create a new project/app add there project name 
 step 3 : After complation for project/app we get Firebase configration
-          var firebaseConfig = {
-            apiKey: "<API_KEY>",
-            authDomain: "<AUTH_DOMAIN>",
-            databaseURL: "<DATABASE_URL>",
-            projectId: "<PROJECT_ID",
-            storageBucket: "<STORAGE_BUCJET",
-            messagingSenderId: "<MESSAGING_SENDER-ID",
-            appId: "<app_id>"
-          };
+  var firebaseConfig = {
+    apiKey: "<API_KEY>",
+    authDomain: "<AUTH_DOMAIN>",
+    databaseURL: "<DATABASE_URL>",
+    projectId: "<PROJECT_ID",
+    storageBucket: "<STORAGE_BUCJET",
+    messagingSenderId: "<MESSAGING_SENDER-ID",
+    appId: "<app_id>"
+  };
 setp 4: Copy of firebase config detail and past in envirement file
+
+
+other detial are pending...............
 
 ## Development server
 
