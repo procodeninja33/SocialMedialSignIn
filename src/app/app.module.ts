@@ -13,6 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { IndexPageComponent } from './index-page/index-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

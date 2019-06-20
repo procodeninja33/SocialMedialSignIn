@@ -4,8 +4,26 @@
 
 export const environment = {
   production: false,
-  serverUrl : 'http://localhost:8080/api/v1/',
-  socketUrl : 'http://localhost:8181'
+  serverUrl: 'http://localhost:8080/api/v1/',
+  socketUrl: 'http://localhost:8181',
+
+  firebaseConfig: {
+    apiKey: '-',
+    authDomain: '-',
+    databaseURL: '-',
+    projectId: '-',
+    storageBucket: '-',
+    messagingSenderId: '-',
+    appId: '-'
+  },
+
+  instagramConfig: {
+    clientId: '-',
+    clientSecret: '-',
+    redirectURL: '-',
+    accessToken: '-',
+    code: '-'
+  },
 };
 
 /*

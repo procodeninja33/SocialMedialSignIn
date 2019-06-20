@@ -1,29 +1,58 @@
 <br>
-<div class="container text-white">
+<div class="container">
   <h2 style="text-align: center; color: cadetblue;"> Login : </h2>
   <hr>
   <br>
   <div class="row justify-content-center">
-    <div class="col-8">
-      <div class="jumbotron bg-secondary">
-        <form [formGroup]="userLogin" name="userLogin" (ngSubmit)="submit()">
-          <div class="form-group">
-            <label> Email</label>
-            <input type="text" class="form-control" formControlName="email">
-          </div>
-          <div class="form-group">
-            <label> Password </label>
-            <input type="password" class="form-control" formControlName="password">
-          </div>
-          <div class="form-group">
-            <br>
-            <button type="submit" class="btn custom_btn"> Login </button> &nbsp;
-            <button type="submit" class="btn" routerLink="/"> Back </button> 
-          </div>
-        </form>
-      </div>
+    <!-- <div class="jumbotron bg-secondary"> -->
 
+    <div class="col-4">
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+      <form [formGroup]="userLogin" name="userLogin" (ngSubmit)="submit()">
+        <div class="form-group">
+          <label> Email</label>
+          <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label> Password </label>
+          <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div class="form-group">
+          <br>
+          <button type="submit" class="btn custom_btn"> Login </button> &nbsp;
+          <button type="submit" class="btn" routerLink="/"> Back </button>
+        </div>
+
+      </form>
     </div>
+    <div class="col-4" style="padding-left: 10%">
+
+      <div class="form-group">
+        <button type="button" class="bbb google" (click)="loginWithGoogle()">
+          <a class="google btn"><i class="fa fa-google fa-fw">
+            </i> Login with Google
+          </a></button><br><br>
+        <button type="button" class="bbb facebook" (click)="loginWithFacebook()">
+          <a class="facebook btn">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+          </a>
+        </button><br><br>
+        <button type="button" class="bbb instagram" (click)="loginWithInstagram()">
+          <a class="instagram btn">
+            <i class="fa fa-instagram fa-fw"></i> Login with Instagram
+          </a>
+        </button><br><br>
+        <button type="button" class="bbb twitter" (click)="loginWithTwitter()">
+          <a class="twitter btn">
+            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+          </a>
+        </button><br><br>
+      </div>
+    </div>
+
+    <!-- </div> -->
 
   </div>
 </div>

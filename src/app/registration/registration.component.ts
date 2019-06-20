@@ -42,7 +42,7 @@ export class RegistrationComponent implements OnInit {
     } else {
 
       this.apis.registerUser(this.userRegister.value).subscribe(data => {
-        console.log(data)
+        console.log(data);
         if (data['status'] === 200) {
           this.userRegister.reset();
           this.userRegister.patchValue({ gender: 'MALE' });

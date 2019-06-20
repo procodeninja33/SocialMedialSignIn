@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
 
     /** when new user registered then live streaming */
     this.apis.addedUser.subscribe(data => {
+      console.log('ehere us adata', data);
       this.toastr.success(data['message']);
       this.userList.unshift(data['data']);
       this.id.push(data['_id']);

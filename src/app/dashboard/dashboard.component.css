@@ -63,4 +63,16 @@
     background-color: rgb(36, 165, 25);
     border-radius: 50%;
     display: inline-block;
-  }
+}
+
+.container {
+    padding: 5% 3% 5% 4%;
+    background: rgb(177, 208, 210);
+    border-radius: 5%;
+}
+
+@media screen and (max-width:1440px) {
+    .email_hide {
+        max-width: 10%
+    }
+}

@@ -1,0 +1,54 @@
+/* vertical line */
+.vl {
+    position: absolute;
+    left: 110%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 275px;
+  }
+  
+  /* text inside the vertical line */
+.vl-innertext {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 8px 10px;
+    color: black;
+}
+
+.row {
+    background: rgb(129, 167, 169);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px #888888;
+    border: 1px solid #ccc!important;
+}
+  
+ .bbb {
+     width: 210px;
+     color: white !important;
+ }
+
+ .google {
+    background: red;
+ }
+
+ .facebook {
+    background: #3b5999;
+ }
+
+ .instagram {
+    background: #e4405f;
+ }
+
+ .twitter {
+     background: #55acee;
+ }
+
+ button:hover {
+     font-size: 15px
+ }
