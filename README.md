@@ -9,9 +9,9 @@ I am using firebase for google, facebook and twitter login. Instagram are there 
 
 Here We need to create a developer Account for Facebook, Twitter and Instagram. Google have there own fire base.
 
-We Start with the firebase, step 1: first off all go this link https://console.firebase.google.com/ if you have not created your account here then create a account 
-step 2: Create a new project/app add there project name 
-step 3 : After complation for project/app we get Firebase configration
+We Start with the firebase, step 1: first off all go this link https://console.firebase.google.com/ if you have not created your account here then create a account.
+step 2: Create a new project/app add there project name.
+step 3 : After complation for project/app we get Firebase configration.
 ```
   var firebaseConfig = {
     apiKey: "<API_KEY>",
@@ -23,7 +23,7 @@ step 3 : After complation for project/app we get Firebase configration
     appId: "<app_id>"
   };
  ```
-setp 4: Copy of firebase config detail and past in envirement file
+setp 4: Copy of firebase config detail and past in envirement file.
 
 
 other detial are pending...............
