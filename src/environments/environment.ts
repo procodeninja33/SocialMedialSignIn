@@ -8,21 +8,21 @@ export const environment = {
   socketUrl: 'http://localhost:8181',
 
   firebaseConfig: {
-    apiKey: '-',
-    authDomain: '-',
-    databaseURL: '-',
-    projectId: '-',
-    storageBucket: '-',
-    messagingSenderId: '-',
-    appId: '-'
+    apiKey: 'AIzaSyDk7xQa2XQPwWnbH1PF7Aw0Anq1GSk8_f0',
+    authDomain: 'mean-stack-auth-demo.firebaseapp.com',
+    databaseURL: 'https://mean-stack-auth-demo.firebaseio.com',
+    projectId: 'mean-stack-auth-demo',
+    storageBucket: 'mean-stack-auth-demo.appspot.com',
+    messagingSenderId: '23081306194',
+    appId: '1:23081306194:web:3f7baaad695b0f23'
   },
 
   instagramConfig: {
-    clientId: '-',
-    clientSecret: '-',
-    redirectURL: '-',
-    accessToken: '-',
-    code: '-'
+    clientId: 'b84ae4e04f11434ea894fb8afad2f27f',
+    clientSecret: '81697408caa34bcaaa85b339d4b0431b',
+    redirectURL: 'http://localhost:4200/login/',
+    accessToken: '1659412852.1677ed0.4b93ac047158465fa5c80ef43687c6e0',
+    code: 'bd347062e46145a6a8b61ea7f8835bf4'
   },
 };
 

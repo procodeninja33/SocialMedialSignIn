@@ -3,7 +3,7 @@ import { WebService } from './web.service';
 import { Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { AppService } from '../app.service';
+import { AppService } from '../services/app.service';
 import { Router } from '@angular/router';
+import { LocalstorageService } from '../services/localstorage.service';
 
 @Component({
   selector: 'app-dashoard',
@@ -15,7 +16,8 @@ export class DashboardComponent implements OnInit {
   loginUsers = [];
   constructor(private apis: AppService,
     private toastr: ToastrService,
-    private route: Router) { }
+    private route: Router,
+    public localDataService : LocalstorageService) { }
 
   ngOnInit() {
 
@@ -46,7 +48,7 @@ export class DashboardComponent implements OnInit {
   logout() {
     this.toastr.warning('logout Successfully.');
     this.route.navigate(['/']);
-    localStorage.removeItem('currunt_user');
+    this.localDataService.removeUser();
   }
 
 }

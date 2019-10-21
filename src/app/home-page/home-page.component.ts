@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AppService } from '../app.service';
+import { AppService } from '../services/app.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { LocalstorageService } from '../services/localstorage.service';
 
 @Component({
   selector: 'app-home-page',
@@ -15,10 +16,11 @@ export class HomePageComponent implements OnInit {
   constructor(private route: Router,
     private toastr: ToastrService,
     private apis: AppService,
-    public afA: AngularFireAuth) { }
+    public afA: AngularFireAuth,
+    public localDataService: LocalstorageService) { }
 
   ngOnInit() {
-    this.userDetails = JSON.parse(localStorage.getItem('currunt_user'));
+    this.userDetails = this.localDataService.getUser();
   }
 
   logout() {
@@ -27,7 +29,7 @@ export class HomePageComponent implements OnInit {
       const localData = localStorage.getItem('currunt_user');
       if (localData) {
         this.apis.logout(localData);
-        localStorage.removeItem('currunt_user');
+        this.localDataService.removeUser();
         this.route.navigate(['/']);
       }
       this.toastr.warning('Logout successfully.');

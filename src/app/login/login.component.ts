@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from '../services/app.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { LocalstorageService } from '../services/localstorage.service';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private route: Router,
     private router: ActivatedRoute,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService,
+    private localDataService: LocalstorageService) { }
 
   ngOnInit() {
     this.formBuild();
@@ -62,7 +64,8 @@ export class LoginComponent implements OnInit {
       if (data['status'] === 200) {
         this.toastr.success(data['message']);
         this.route.navigate(['home']);
-        localStorage.setItem('currunt_user', JSON.stringify(data['data']));
+        // localStorage.setItem('currunt_user', JSON.stringify(data['data']));
+        this.localDataService.addUser(data['data']);
       } else {
         this.toastr.error(data['message']);
       }
@@ -118,7 +121,7 @@ export class LoginComponent implements OnInit {
       if (newData['status'] === 200) {
         this.apis.loginViaSocialMedia({ email: userData.email }).subscribe(loginData => {
           if (loginData['status'] === 200) {
-            localStorage.setItem('currunt_user', JSON.stringify(loginData['data']));
+            this.localDataService.addUser(loginData['data']);
             this.route.navigate(['/home']);
           } else {
             this.toastr.error(loginData['message']);
